@@ -1,0 +1,89 @@
+
+.page {
+  background-image: url(/src/assets/resources/bg.jpg);
+  height: 100vh;
+  color: white;
+  background-size:cover;
+}
+.page .game {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 800px;
+}
+.page .game .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.page .game .head .name {
+  font-weight: 500;
+  font-size:26px;
+  letter-spacing: 1px;
+}
+.page .game .head .points {
+  background: linear-gradient(90deg, #FF5F7E, #C46CFF);
+  padding: 5px 8px;
+  border-radius: 25px;
+}
+.page .game .body {
+  background-color: #343963;
+  border-radius: 6px;
+  text-align: center;
+  padding: 80px 120px;
+  height: fit-content;
+}
+.page .game .body .numbersBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 20px;
+  
+}
+.page .game .body .numbersBox .numbers {
+  background-color: #383f6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.qus {
+  font-size: 20px;
+}
+.answers{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 20px; /* spacing between items */
+  height: 150px;
+}
+.page .game .body button {
+  background: #383f6e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+.page .game .body button.right::after {
+  content: url(/src/assets/resources/Check_round_fill.svg);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(calc(-50% + 5px));
+}
+.page .game .body button.right , .page .game .body button.wrong{
+  background: linear-gradient(90deg, #FF5F7E, #C46CFF)
+}
+.page .game .body button.wrong::after {
+  content: url(/src/assets/resources/Close_round_fill.svg);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(calc(-50% + 5px));
+}
